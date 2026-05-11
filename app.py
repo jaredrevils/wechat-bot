@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 TOKEN = "wechat_gemini_bot"
 API_KEY = "sk-2PXqz5UXVWRe2dv17UmHolh7nHGVZOucRg8skJQhJin0CMxP"
-BASE_URL = "https://new.xingkongai.online/v1"
+BASE_URL = "https://api.deepseek.com"
 
 def call_gemini(user_msg):
     headers = {
@@ -16,7 +16,7 @@ def call_gemini(user_msg):
         "Content-Type": "application/json"
     }
     data = {
-        "model": "gpt-4o-mini",
+        "model": "deepseek-v4-flash",
         "messages": [{"role": "user", "content": user_msg}]
     }
     res = requests.post(f"{BASE_URL}/chat/completions", headers=headers, json=data)
