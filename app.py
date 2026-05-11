@@ -16,7 +16,7 @@ def call_gemini(user_msg):
         "Content-Type": "application/json"
     }
     data = {
-        "model": "gpt-5.5-flash",
+        "model": "gpt-4o-mini",
         "messages": [{"role": "user", "content": user_msg}]
     }
     res = requests.post(f"{BASE_URL}/chat/completions", headers=headers, json=data)
