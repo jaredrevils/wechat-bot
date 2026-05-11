@@ -7,7 +7,7 @@ import time
 app = Flask(__name__)
 
 TOKEN = "wechat_gemini_bot"
-API_KEY = "sk-2PXqz5UXVWRe2dv17UmHolh7nHGVZOucRg8skJQhJin0CMxP"
+API_KEY = "sk-8749fd42c341442bb14bdad71dfece2c"
 BASE_URL = "https://api.deepseek.com"
 
 def call_gemini(user_msg):
